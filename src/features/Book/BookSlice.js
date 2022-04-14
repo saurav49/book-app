@@ -10,7 +10,6 @@ const initialState = {
 export const getBookBySearchItem = createAsyncThunk(
   "book/getBookBySearchItem",
   async (searchTerm) => {
-    console.log({ searchTerm });
     try {
       const response = await getBook(searchTerm);
       return response.items;
@@ -35,7 +34,6 @@ export const bookSlice = createSlice({
       state.status = "loading";
     },
     [getBookBySearchItem.fulfilled]: (state, action) => {
-      console.log(action.payload);
       state.status = "fulfilled";
       state.bookList = action.payload;
       state.bookLoader = false;

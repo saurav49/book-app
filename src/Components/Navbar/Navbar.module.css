@@ -1,0 +1,21 @@
+.navbar__wrapper {
+    width: 100vw;
+    padding: 1.75em;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.brand__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.brand__icon {
+    font-size: 3rem;
+    margin-right: 0.25em;
+}
