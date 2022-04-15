@@ -9,7 +9,10 @@ function BookDetailPage() {
   const dispatch = useDispatch();
   const { bookList, bookLoader } = useSelector((state) => state.book);
   const { id } = useParams();
-  const reqdBook = useMemo(() => bookList.find((book) => book.id === id), [id]);
+  const reqdBook = useMemo(
+    () => bookList.find((book) => book.id === id),
+    [id, bookList]
+  );
 
   useEffect(() => {
     if (bookList && bookList.length === 0) {
