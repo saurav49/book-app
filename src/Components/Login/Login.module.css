@@ -1,0 +1,24 @@
+.login__btn {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 0.5em;
+    padding: 1em 1.5em;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+    font-size: 1.2rem;
+}
+
+.login__btn:hover {
+    background-color: rgb(214, 214, 214);
+}
+
+.logout__btn {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+}
+
+@media screen and (max-width: 430px) {
+    .logout__btn {
+        margin-top: 1em;
+    }
+}

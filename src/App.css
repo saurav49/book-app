@@ -8,3 +8,10 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+.login__wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}

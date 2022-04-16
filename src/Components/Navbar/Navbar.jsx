@@ -2,6 +2,7 @@ import React from "react";
 import { ImBooks } from "react-icons/im";
 import styles from "./Navbar.module.css";
 import { useNavigate } from "react-router";
+import { LogoutButton } from "../index";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ function Navbar() {
         <ImBooks className={styles.brand__icon} />
         <h1>Book Kart</h1>
       </div>
+      <LogoutButton />
     </div>
   );
 }
