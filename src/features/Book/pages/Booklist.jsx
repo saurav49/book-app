@@ -9,7 +9,7 @@ function Booklist() {
   const [pageNumber, setPageNumber] = useState(1);
   const { bookList, bookLoader, hasMore } = useSelector((state) => state.book);
   const dispatch = useDispatch();
-  // console.log(bookList, hasMore, localStorage.getItem("recently__searched"));
+
   const observer = useRef();
   const lastBookElementEl = useCallback(
     (node) => {
@@ -34,6 +34,7 @@ function Booklist() {
           pageNumber: pageNumber,
         })
       );
+    // eslint-disable-next-line
   }, [pageNumber]);
 
   return (
