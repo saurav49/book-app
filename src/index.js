@@ -24,8 +24,8 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Auth0Provider
-      domain={"dev--klqtrmd.us.auth0.com"}
-      clientId={"TL63XwOx4EGaqKbMcLkkSGtAAebmxiVK"}
+      domain={domain}
+      clientId={clientId}
       redirectUri={window.location.origin}
       audience="https://bookBackend.saurav49.repl.co"
       scope="openid profile email"
