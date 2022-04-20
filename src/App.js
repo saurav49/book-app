@@ -6,6 +6,7 @@ import {
   LoginButton,
   LogoutButton,
   PrivateRoute,
+  Profile,
 } from "./Components/index";
 import { Booklist } from "./features/Book/pages/Booklist";
 import { BookDetailPage } from "./features/Book/pages/BookDetailPage";
@@ -44,9 +45,17 @@ function App() {
 
   return (
     <div className="App">
-      {error && <p>Authentication Error</p>}
-      {!error && isLoading && <Watch width={100} height={100} color="#333" />}
       <Navbar />
+      {error && (
+        <div className="loader__wrapper">
+          <p>Authentication Error</p>
+        </div>
+      )}
+      {!error && isLoading && (
+        <div className="loader__wrapper">
+          <Watch width={100} height={100} color="#333" />
+        </div>
+      )}
       <Routes>
         <Route
           path="/"
@@ -72,7 +81,12 @@ function App() {
             }
           />
         </Route>
-        <Route path="/book/:id" element={<BookDetailPage />} />
+        <Route path="/book/:id" element={<PrivateRoute />}>
+          <Route path="/book/:id" element={<BookDetailPage />} />
+        </Route>
+        <Route path="/user" element={<PrivateRoute />}>
+          <Route path="/user" element={<Profile />} />
+        </Route>
       </Routes>
     </div>
   );

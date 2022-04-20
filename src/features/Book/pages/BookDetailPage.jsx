@@ -43,6 +43,7 @@ function BookDetailPage() {
               imageLinks={reqdBook.volumeInfo?.imageLinks}
               description={reqdBook.volumeInfo?.description}
               pageCount={reqdBook.volumeInfo?.pageCount}
+              previewLink={reqdBook.volumeInfo?.previewLink}
             />
           )}
         </>
@@ -61,6 +62,7 @@ const BookDetail = ({
   imageLinks,
   description,
   pageCount,
+  previewLink,
 }) => {
   const navigate = useNavigate();
 
@@ -80,6 +82,9 @@ const BookDetail = ({
               })}
             <span>{publishedDate}</span>
           </p>
+          <a href={previewLink} className={styles.preview__btn}>
+            Preview
+          </a>
           <p className={styles.book__detail__desc__text}>{description}</p>
         </div>
         <div className={styles.book__detail__img__wrapper}>

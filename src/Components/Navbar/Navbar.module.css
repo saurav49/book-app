@@ -20,8 +20,39 @@
     margin-right: 0.25em;
 }
 
+.profile__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.profile__btn > p {
+    margin-top: 0.5em;
+    font-size: 1rem;
+}
+
+.profile__icon {
+    font-size: 2rem;
+}
+
+.user__logout__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 @media screen and (max-width: 430px) {
     .navbar__wrapper {
         flex-direction: column;
+    }
+
+    .user__logout__wrapper {
+        margin-top: 1em;
     }
 }

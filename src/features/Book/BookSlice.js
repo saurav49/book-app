@@ -63,7 +63,6 @@ export const bookSlice = createSlice({
         });
         return unique;
       };
-      console.log(action.payload);
       state.hasMore = action.payload.totalItems > 0;
       state.bookList = getUniqueArr([
         ...action.payload.items,
@@ -80,7 +79,6 @@ export const bookSlice = createSlice({
     },
     [saveSearchQuery.fulfilled]: (state, action) => {
       state.status = "fulfilled";
-      console.log(action.payload);
       state.searchedQueries = action.payload.sort(
         ({ count: a }, { count: b }) => b - a
       );

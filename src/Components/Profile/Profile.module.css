@@ -1,0 +1,18 @@
+.article__wrapper {
+    font-size: 1.2rem;
+    width: 90%;
+    min-height: 80vh;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile__img {
+      width: 150px;
+      border: 0.5rem double #000;
+      border-radius: 50%;
+      margin: 0 1rem 1rem;
+  }
+  

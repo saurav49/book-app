@@ -9,6 +9,14 @@ body {
   overflow-x: hidden;
 }
 
+.loader__wrapper {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  
+}
+
 .login__wrapper {
   min-height: 100vh;
   display: flex;

@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import styles from "./Book.module.css";
-import { MdCancelPresentation } from "react-icons/md";
 
 const MostSearched = () => {
   const { searchedQueries } = useSelector((state) => state.book);
@@ -23,9 +22,6 @@ const SearchSnippet = ({ searchValue }) => {
   return (
     <div className={styles.search__snippet__wrapper}>
       <p>{searchValue}</p>
-      <button className={styles.search__snippet__cancel__btn}>
-        <MdCancelPresentation />
-      </button>
     </div>
   );
 };
