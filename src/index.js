@@ -7,15 +7,16 @@ import { store } from "./app/store";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
+import env from "react-dotenv";
 
-const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const domain = env.REACT_APP_AUTH0_DOMAIN;
+const clientId = env.REACT_APP_AUTH0_CLIENT_ID;
 
 console.log(
   { domain },
   { clientId },
-  process.env.REACT_APP_AUTH0_DOMAIN,
-  process.env.REACT_APP_AUTH0_CLIENT_ID
+  env.REACT_APP_AUTH0_DOMAIN,
+  env.REACT_APP_AUTH0_CLIENT_ID
 );
 
 const container = document.getElementById("root");
