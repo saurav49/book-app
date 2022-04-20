@@ -12,13 +12,6 @@ import env from "react-dotenv";
 const domain = env.REACT_APP_AUTH0_DOMAIN;
 const clientId = env.REACT_APP_AUTH0_CLIENT_ID;
 
-console.log(
-  { domain },
-  { clientId },
-  env.REACT_APP_AUTH0_DOMAIN,
-  env.REACT_APP_AUTH0_CLIENT_ID
-);
-
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(

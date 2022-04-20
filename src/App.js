@@ -13,9 +13,10 @@ import { Routes, Route } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 import { ADD_USER } from "./urls";
+import { Watch } from "react-loader-spinner";
 
 function App() {
-  const { user, getAccessTokenSilently } = useAuth0();
+  const { user, getAccessTokenSilently, isLoading, error } = useAuth0();
 
   useEffect(() => {
     user &&
@@ -43,14 +44,20 @@ function App() {
 
   return (
     <div className="App">
+      {error && <p>Authentication Error</p>}
+      {!error && isLoading && <Watch width={100} height={100} color="#333" />}
       <Navbar />
       <Routes>
         <Route
           path="/"
           element={
             <div className="login__wrapper">
-              <LoginButton />
-              <LogoutButton />
+              {!error && !isLoading && (
+                <>
+                  <LoginButton />
+                  <LogoutButton />
+                </>
+              )}
             </div>
           }
         />
